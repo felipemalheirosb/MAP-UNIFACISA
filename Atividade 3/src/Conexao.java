@@ -3,16 +3,16 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /** 
- * Atividade: Aplique o padr„o Singleton na classe abaixo. 
+ * Atividade: Aplique o padr√£o Singleton na classe abaixo. 
  *
  **/
 public class Conexao {
 	
-	private Conexao () {   }
+    private Conexao () {   }
     private static Connection con = null;
     private static Conexao conexaoInstance;
     
-    public static Conexao getInstance() throws ClassNotFoundException {
+    public static synchronized Conexao getInstance() throws ClassNotFoundException {
 		if(conexaoInstance == null) {
 			conexaoInstance = new Conexao();
 			System.out.println("Conectando ao banco...");
