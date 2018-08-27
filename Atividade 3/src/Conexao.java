@@ -16,15 +16,14 @@ public class Conexao {
 		if(conexaoInstance == null) {
 			conexaoInstance = new Conexao();
 			System.out.println("Conectando ao banco...");
-	        try {
-	            Class.forName("com.mysql.jdbc.Driver");
-	            con =  DriverManager.getConnection("jdbc:mysql://127.0.0.1/banco","usuario","senha");
-	            System.out.println("Conectado.");
-	        } catch(SQLException e) {
-	              System.out.println(e);
-	          }
+			try {
+	    		Class.forName("com.mysql.jdbc.Driver");
+	    		con =  DriverManager.getConnection("jdbc:mysql://127.0.0.1/banco","usuario","senha");
+	    		System.out.println("Conectado.");
+			} catch(SQLException e) {
+	      		System.out.println(e);
+	  		}
 		}
 		return conexaoInstance;
 	}
-
 }
