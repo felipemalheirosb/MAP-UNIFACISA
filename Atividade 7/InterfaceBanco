@@ -1,0 +1,7 @@
+public interface InterfaceBanco {
+
+	public String getNumeroDeUsuarios();
+
+	public String getUsuariosConectados();
+
+}
