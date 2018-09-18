@@ -1,5 +1,5 @@
 
-public class BancoProxy implements BancoUsuarios {
+public class BancoProxy implements InterfaceBanco {
 
 	protected String usuario, senha;
 
