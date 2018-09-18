@@ -1,11 +1,19 @@
 
 
-public interface BancoUsuarios {
-	public int quantidadeDeUsuarios = (int) (Math.random() * 100);
-	public int usuariosConectados = (int) (Math.random() * 10);
+public class BancoUsuarios implements InterfaceBanco{
+	private int quantidadeDeUsuarios;
+	private int usuariosConectados;
 
-	public String getNumeroDeUsuarios();
-	
-	public String getUsuariosConectados();
-	
+	public BancoUsuarios() {
+		quantidadeDeUsuarios = (int) (Math.random() * 100);
+		usuariosConectados = (int) (Math.random() * 10);
+	}
+
+	public String getNumeroDeUsuarios() {
+		return new String("Total de usuários: " + quantidadeDeUsuarios);
+	}
+
+	public String getUsuariosConectados() {
+		return new String("Usuários conectados: " + usuariosConectados);
+	}
 }
