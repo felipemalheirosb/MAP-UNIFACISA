@@ -1,0 +1,7 @@
+Exercício - Observer
+ 
+a. O exemplo tem algo de diferente?
+	aprensenta duplicação de código, nas classes que fazer a mesma funcionalidade
+i. Que outras formas poderíamos implementar o mesmo comportamento?
+	implementar a transformação dos numeros em apenas uma classe
+
